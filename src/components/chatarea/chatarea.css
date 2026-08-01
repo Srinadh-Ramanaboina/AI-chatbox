@@ -1,0 +1,58 @@
+.chat-area{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:calc(100vh - 70px);
+
+    padding:30px;
+}
+
+.welcome-screen{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.welcome-screen h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+}
+
+.welcome-screen p{
+
+    width:70%;
+
+    font-size:18px;
+
+    color:#9ca3af;
+
+    line-height:1.8;
+}
+
+.messages{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:auto;
+}

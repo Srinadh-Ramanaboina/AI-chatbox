@@ -2,18 +2,19 @@
 
     height:70px;
 
+    background:#111827;
+
+    color:white;
+
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
 
-    padding:0 35px;
+    padding:0 30px;
 
-    background:#111827;
-
-    color:white;
-
+    border-bottom:1px solid #2d3748;
 }
 
 .navbar-left{
@@ -23,7 +24,19 @@
     align-items:center;
 
     gap:20px;
+}
 
+.menu-btn{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:26px;
+
+    cursor:pointer;
 }
 
 .navbar-right{
@@ -31,33 +44,28 @@
     display:flex;
 
     gap:15px;
-
 }
 
-.menu-btn{
+.nav-btn{
 
-    font-size:25px;
+    width:42px;
 
-    background:none;
+    height:42px;
 
     border:none;
+
+    border-radius:50%;
+
+    background:#1f2937;
 
     color:white;
 
     cursor:pointer;
 
+    transition:.3s;
 }
 
-.navbar-right button{
+.nav-btn:hover{
 
-    background:none;
-
-    border:none;
-
-    color:white;
-
-    font-size:20px;
-
-    cursor:pointer;
-
+    background:#374151;
 }

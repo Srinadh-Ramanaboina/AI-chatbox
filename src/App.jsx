@@ -1,36 +1,58 @@
-import { Mic } from "lucide-react";
+import { useState } from "react";
+import { Mic, Paperclip, SendHorizontal } from "lucide-react";
+import ChatArea from "./components/ChatArea/ChatArea";
+
 import Navbar from "./components/Navbar/Navbar";
+import Sidebar from "./components/Sidebar/Sidebar";
+
 import "./App.css";
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
   return (
     <div className="app">
+      <Navbar
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+      />
 
-      <Navbar />
+      <div className="main-layout">
 
-      <main className="hero">
+        <Sidebar open={sidebarOpen} />
 
-        <h1>What do you want to learn today?</h1>
+        <main
+          className={`hero ${sidebarOpen ? "" : "full-width"}`}
+        >
+          <h1>What do you want to learn today?</h1>
 
-        <div className="search-box">
+          <div className="search-box">
 
-          <button className="left-btn">
-          </button>
+            <button className="left-btn">
+              <Paperclip size={20} />
+            </button>
 
-          <input
-            type="text"
-            placeholder="Ask anything about your studies..."
-          />
+            <input
+              type="text"
+              placeholder="Ask anything about your studies..."
+            />
 
-          <div className="right-buttons">
-            <button>🎤</button>
-            <button>➤</button>
+            <div className="right-buttons">
+
+              <button>
+                <Mic size={20} />
+              </button>
+
+              <button>
+                <SendHorizontal size={20} />
+              </button>
+
+            </div>
+
           </div>
+        </main>
 
-        </div>
-
-      </main>
-
+      </div>
     </div>
   );
 }

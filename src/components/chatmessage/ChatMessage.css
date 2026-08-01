@@ -1,0 +1,40 @@
+.message{
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+    width:100%;
+}
+
+.user-message{
+    justify-content:flex-end;
+}
+
+.ai-message{
+    justify-content:flex-start;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#374151;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.message-content{
+    max-width:70%;
+    background:#1f2937;
+    color:white;
+    padding:15px 20px;
+    border-radius:18px;
+    line-height:1.6;
+    font-size:16px;
+}
+
+.user-message .message-content{
+    background:#2563eb;
+}

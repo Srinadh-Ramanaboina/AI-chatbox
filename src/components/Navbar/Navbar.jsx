@@ -1,35 +1,16 @@
 import "./Navbar.css";
 
-function Navbar() {
-
-  const handleMenu = () => {
-    console.log("Menu clicked");
-    // Open sidebar here
-  };
-
-  const handleTheme = () => {
-    console.log("Theme clicked");
-    // Toggle dark/light mode here
-  };
-
-  const handleSettings = () => {
-    console.log("Settings clicked");
-    // Navigate to Settings page
-  };
-
-  const handleProfile = () => {
-    console.log("Profile clicked");
-    // Open profile page
-  };
+function Navbar({ sidebarOpen, setSidebarOpen }) {
 
   return (
+
     <nav className="navbar">
 
       <div className="navbar-left">
 
         <button
           className="menu-btn"
-          onClick={handleMenu}
+          onClick={() => setSidebarOpen(!sidebarOpen)}
         >
           ☰
         </button>
@@ -40,36 +21,24 @@ function Navbar() {
 
       <div className="navbar-right">
 
-        <button
-          className="nav-btn"
-          onClick={handleTheme}
-          title="Theme"
-        >
+        <button className="nav-btn">
           🌙
         </button>
 
-        <button
-          className="nav-btn"
-          onClick={handleSettings}
-          title="Settings"
-        >
+        <button className="nav-btn">
           ⚙️
         </button>
 
-        <button
-          className="nav-btn"
-          onClick={handleProfile}
-          title="Profile"
-        >
+        <button className="nav-btn">
           👤
         </button>
 
       </div>
 
-      
-
     </nav>
+
   );
+
 }
 
 export default Navbar;
